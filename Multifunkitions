@@ -1,0 +1,45 @@
+import stopuhrmodul
+import dicemachinemodul
+import wikisearchingmodul
+import taschenrechner2modul
+import pyttsx3
+engine = pyttsx3.init()
+text1 = "Hallo! Ich bin ein multifunktionales Programm."
+text2 = "Was kann ich für sie tun? Ich werde ihnen eine Liste mit den möglichen Funktionen zeigen."
+engine.say(text1)
+engine.runAndWait()
+while True:
+    engine.say(text2)
+    engine.runAndWait()
+    aktion = input("2  Stopuhr\n"
+                   "3  Würfelmaschine\n"
+                   "4  Wikipedia Suche\n"
+                   "5  textbasierter Taschenrechner\n"
+                   "6  Beenden\n"
+                   "Wählen Sie: ")
+   
+    elif aktion == "2":
+        engine.say("Sie haben die Stopuhr gestartet.")
+        engine.runAndWait()
+        stopuhrmodul.Stopuhrmodul()
+        continue
+    elif aktion == "3":
+        engine.say("Sie haben die Würfelmaschine gestartet.")
+        engine.runAndWait()
+        dicemachinemodul.Dicemachinemodul()
+        continue
+    elif aktion == "4":
+        engine.say("Sie haben die Wikipedia Suche gestartet.")
+        engine.runAndWait()
+        wikisearchingmodul.Wikisearchingmodul()
+        continue
+    elif aktion == "5":
+        engine.say("Sie haben den textbasierten Taschenrechner gestartet.")
+        engine.runAndWait()
+        taschenrechner2modul.Taschenrechner2modul()
+        continue
+    elif aktion == "6":
+        engine.say("Sie haben das Programm beendet. Bis bald!")
+        engine.runAndWait()
+        break
+        
